@@ -1,10 +1,16 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Main from '@/pages/Main';
+import Contact from '@/pages/Contact';
+
 function App() {
     return (
         <>
-            <button className="py-2 px-4 font-semibold rounded-lg shadow-md text-white bg-green-500 hover:bg-green-700">
-                버튼
-            </button>
-            <h1 className="text-3xl font-bold underlin">hello world</h1>
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<Main />} />
+                    <Route path="/contact" element={<Contact />} />
+                </Routes>
+            </BrowserRouter>
         </>
     );
 }

@@ -5,7 +5,7 @@ const MainLayout = (props: { children: React.ReactNode }) => {
     return (
         <div className="grid grid-rows-[auto,1fr,auto] min-h-screen">
             <Header />
-            <main className="min-h-full ">{props.children}</main>
+            <main className="flex flex-col items-center min-h-full">{props.children}</main>
             <Footer />
         </div>
     );

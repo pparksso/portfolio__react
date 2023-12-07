@@ -6,6 +6,13 @@ export default {
         extend: {
             colors: {
                 black: '#333',
+                emerald: '#10b981',
+            },
+            padding: {
+                '40px': '40px',
+            },
+            margin: {
+                '20px': '20px',
             },
         },
         fontFamily: {

@@ -18,17 +18,17 @@ const Profile = () => {
                         <h2 className="text-2xl font-bold text-emerald">Contact</h2>
                         <div className="flex items-center">
                             <h3 className="text-lg font-bold w-28">Phone :</h3>
-                            <span>010-6482-5124</span>
+                            <span>{import.meta.env.VITE_TEL}</span>
                         </div>
                         <div className="flex items-center">
                             <h3 className="text-lg font-bold w-28">Email :</h3>
-                            <span>thgml5143@hanmail.net</span>
+                            <span>{import.meta.env.VITE_MAIL}</span>
                         </div>
                         <div className="flex items-center">
                             <h3 className="text-lg font-bold w-28">GitHub :</h3>
                             <span>
-                                <a href="https://github.com/pparksso" target="_blank">
-                                    https://github.com/pparksso
+                                <a href={import.meta.env.VITE_GITHUB} target="_blank">
+                                    {import.meta.env.VITE_GITHUB}
                                 </a>
                             </span>
                         </div>

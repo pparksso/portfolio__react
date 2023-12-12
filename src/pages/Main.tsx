@@ -1,6 +1,7 @@
 import MainLayout from '@/layouts/MainLayout';
 import Profile from '@/components/Profile';
 import Experience from '@/components/Experience';
+import SidePj from '@/components/SidePj';
 import Section from '@/components/Card/Section';
 import Title from '@/components/Card/Title';
 
@@ -28,6 +29,7 @@ const Main = () => {
                     <p className="text-lg">어떤 회사인지, 여기서 무엇을 배웠는지 기술</p>
                 </Section>
                 <Experience />
+                <SidePj />
             </div>
         </MainLayout>
     );

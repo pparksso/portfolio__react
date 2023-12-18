@@ -2,9 +2,10 @@ import { ExperienceItem } from '@/types/type';
 
 export const experienceDatas: ExperienceItem[] = [
     {
+        id: 1,
         name: `${import.meta.env.VITE_PC}`,
         url: `https://${import.meta.env.VITE_PC}`,
-        component: `/experience/${import.meta.env.VITE_PC}`,
+        component: `/project/${import.meta.env.VITE_PC}`,
         desc: 'AI 사진 변환 기능을 가진 광고 수익 모델 사이트 및 관리자 페이지 프론트 개발',
         team: ['자사 프론트엔드 개발자 1명, 백엔드 개발자 1명'],
         period: '2023.11 ~ 2023.12',
@@ -16,9 +17,10 @@ export const experienceDatas: ExperienceItem[] = [
         ],
     },
     {
+        id: 2,
         name: import.meta.env.VITE_TOON,
         url: `https://beta.${import.meta.env.VITE_TOON}.com`,
-        component: `/experience/${import.meta.env.VITE_TOON}`,
+        component: `/project/${import.meta.env.VITE_TOON}`,
         desc: `웹툰, 만화 번역 사이트 ${import.meta.env.VITE_TOON}의 회원 관련 기능 구현`,
         team: ['자사 프론트엔드 개발자 2명, 백엔드 개발자 1명'],
         period: '2023.03 ~ 2022.11',
@@ -30,9 +32,10 @@ export const experienceDatas: ExperienceItem[] = [
         ],
     },
     {
+        id: 3,
         name: '자사 기술 소개페이지',
         url: `https://tech.${import.meta.env.VITE_IDEA}.com`,
-        component: '/experience/tech',
+        component: '/project/tech',
         desc: '자사 기술 소개 페이지 프론트 개발',
         team: ['1인 개발'],
         period: '2023.05',
@@ -40,15 +43,16 @@ export const experienceDatas: ExperienceItem[] = [
         function: ['반응형 웹 개발', 'swiper로 페이지 스와이프 개발'],
     },
     {
+        id: 4,
         name: '자사 홈페이지 개발',
         url: `https://${import.meta.env.VITE_IDEA}.com`,
-        component: '/experience/acon',
+        component: '/project/acon',
         desc: '자사 홈페이지, 관리자 페이지 프론트 개발',
         team: ['자사 프론트엔드 개발자 2명, 백엔드 개발자 1명'],
         period: '2022.11 ~ 2023.01',
         stack: 'vue3, pinia, scss, swiper, i18n',
         function: [
-            '기존 vanila javascript로 구현되어있던 자사홈페이지를 vue3로 마이그레이션',
+            '기존 vanilla javascript로 구현되어있던 자사홈페이지를 vue3로 마이그레이션',
             '관리자페이지 전체 프론트 개발',
         ],
     },
@@ -56,6 +60,7 @@ export const experienceDatas: ExperienceItem[] = [
 
 export const sideProjectDatas: ExperienceItem[] = [
     {
+        id: 5,
         name: `여행 블로그`,
         url: ``,
         component: `/experience/travelnote`,

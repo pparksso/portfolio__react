@@ -24,16 +24,25 @@ const Profile = () => {
                         <h2 className="text-2xl font-bold text-emerald">Contact</h2>
                         <div className="flex items-center max-[430px]:justify-center max-[430px]:flex-col">
                             <h3 className="text-lg font-bold min-[430px]:w-28">Phone :</h3>
-                            <span>{import.meta.env.VITE_TEL}</span>
+                            <span className=" text-slate-400">{import.meta.env.VITE_TEL}</span>
                         </div>
                         <div className="flex items-center max-[430px]:justify-center max-[430px]:flex-col">
                             <h3 className="text-lg font-bold min-[430px]:w-28">Email :</h3>
-                            <span>{import.meta.env.VITE_MAIL}</span>
+                            <a
+                                href={`mailto:${import.meta.env.VITE_MAIL}`}
+                                className=" text-slate-400"
+                            >
+                                {import.meta.env.VITE_MAIL}
+                            </a>
                         </div>
                         <div className="flex items-center max-[430px]:justify-center max-[430px]:flex-col">
                             <h3 className="text-lg font-bold min-[430px]:w-28">GitHub :</h3>
                             <span>
-                                <a href={import.meta.env.VITE_GITHUB} target="_blank">
+                                <a
+                                    href={import.meta.env.VITE_GITHUB}
+                                    target="_blank"
+                                    className=" text-slate-400"
+                                >
                                     {import.meta.env.VITE_GITHUB}
                                 </a>
                             </span>
@@ -43,19 +52,21 @@ const Profile = () => {
                         <h2 className="text-2xl font-bold text-emerald">Skill</h2>
                         <div className="flex items-center max-[430px]:justify-center max-[430px]:flex-col">
                             <h3 className="text-lg font-bold min-[430px]:w-28">Deploy :</h3>
-                            <span>...</span>
+                            <span className=" text-slate-400">...</span>
                         </div>
                         <div className="flex items-center max-[430px]:justify-center max-[430px]:flex-col">
                             <h3 className="text-lg font-bold min-[430px]:w-28">Language :</h3>
-                            <span>Javascript, Typescript</span>
+                            <span className=" text-slate-400">Javascript, Typescript</span>
                         </div>
                         <div className="flex items-center max-[430px]:justify-center">
                             <h3 className="text-lg font-bold min-[430px]:w-28">Framework: </h3>
-                            <span>Vue3, Nuxt3, React</span>
+                            <span className=" text-slate-400">Vue3, Nuxt3, React</span>
                         </div>
                         <div className="flex items-center max-[430px]:justify-center max-[430px]:flex-col">
                             <h3 className="text-lg font-bold min-[430px]:w-28">Tool: </h3>
-                            <span>GitHub, GitLab, Figma, Zeplin, Sourcetree</span>
+                            <span className=" text-slate-400">
+                                GitHub, GitLab, Figma, Zeplin, Sourcetree, Slack
+                            </span>
                         </div>
                     </div>
                 </div>

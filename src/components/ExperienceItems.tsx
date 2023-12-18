@@ -8,7 +8,7 @@ const ExperienceItems = (props: { item: ExperienceItem }) => {
             <div className="flex items-end mb-3">
                 <Link
                     to={`/project/${item.id}`}
-                    className="text-[24px] font-bold text-lime-500 mr-4 leading-none"
+                    className="text-[24px] font-bold text-lime-500 mr-4 leading-none underline"
                 >
                     {item.name}
                 </Link>

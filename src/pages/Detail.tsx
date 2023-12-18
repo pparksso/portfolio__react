@@ -20,7 +20,7 @@ const Detail = () => {
     }, [id, navigate]);
     return (
         <MainLayout>
-            <div className="w-3/5 py-12 text-black pb-52">
+            <div className="w-4/5 py-12 text-black md:w-3/5 pb-52">
                 <h1 className="text-[24px] font-bold text-emerald leading-none mb-8">
                     {contents?.name}
                 </h1>
@@ -74,7 +74,7 @@ const Detail = () => {
                                         <img
                                             src={f.img}
                                             alt={f.title}
-                                            className="shadow-2xl w-[90%]"
+                                            className="shadow-2xl md:w-[90%] w-full"
                                         />
                                     )}
                                 </div>

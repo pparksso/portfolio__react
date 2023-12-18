@@ -8,7 +8,7 @@ import Title from '@/components/Card/Title';
 const Main = () => {
     return (
         <MainLayout>
-            <div className="w-3/5 py-12 text-black">
+            <div className="w-4/5 py-12 text-black md:w-3/5">
                 <Profile />
                 <Section id="introduce">
                     <Title>Introduction</Title>
@@ -22,7 +22,7 @@ const Main = () => {
                 </Section>
                 <Section id="career">
                     <Title>Career</Title>
-                    <div className="flex justify-between mb-3 text-lg">
+                    <div className="flex flex-col justify-between mb-3 text-lg md:flex-row">
                         <h3>(주) 아이디어콘서트</h3>
                         <span>2022.10.24 ~ 2024.01.15 (1년 2개월)</span>
                     </div>

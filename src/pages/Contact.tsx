@@ -12,26 +12,30 @@ const Contact = () => {
     console.log(messageVal);
     return (
         <MainLayout>
-            <div className="relative w-3/5 py-12 text-black">
-                <div className="absolute top-[3rem] -translate-x-1/2 bg-white left-1/2 px-2">
+            <div className="relative w-[90%] xl:w-3/5 py-12 text-black">
+                <div className="absolute top-[3rem] -translate-x-1/2 bg-white left-1/2 px-2 text-center">
                     <Title>Contact me!</Title>
                 </div>
-                <div className="border mt-[1rem] shadow-lg rounded-md px-10 py-14 flex">
-                    <div className="w-1/2 pr-3 overflow-hidden opacity-90">
-                        <img src={img} alt="" className="rounded-md" />
+                <div className="border mt-[1rem] shadow-lg rounded-md px-10 py-14 flex flex-col md:flex-row items-center md:items-start h-full">
+                    <div className="w-4/5 mb-5 overflow-hidden rounded-full md:mb-0 md:pr-3 md:rounded-none md:w-1/2 opacity-90">
+                        <img
+                            src={img}
+                            alt=""
+                            className="object-cover md:rounded-md aspect-square md:aspect-auto"
+                        />
                     </div>
-                    <div className="flex flex-col w-1/2 pl-3">
+                    <div className="flex flex-col w-full md:h-full md:w-1/2 md:pl-3">
                         <ContactInput type="text" id="name" label="Name" />
                         <ContactInput type="text" id="email" label="Email" />
                         <div
-                            className={`relative flex-grow px-12 pt-6 pb-2 overflow-y-hidden rounded-md bg-emerald bg-opacity-10 ${
+                            className={`relative flex-grow px-6 md:px-12 pt-6 pb-2 overflow-y-hidden rounded-md bg-emerald bg-opacity-10 ${
                                 messageFocus && 'border-emerald border-2'
                             } `}
                         >
                             <textarea
                                 id="message"
                                 placeholder=""
-                                className={`h-full resize-none w-full bg-transparent outline-none text-base peer hide-scrollbar`}
+                                className={`resize-none w-full bg-transparent outline-none text-base peer hide-scrollbar h-24 md:h-auto`}
                                 onFocus={() => setMessageFocus(true)}
                                 onBlur={() => setMessageFocus(false)}
                                 onInput={(e: ChangeEvent<HTMLTextAreaElement>) =>
@@ -40,7 +44,7 @@ const Contact = () => {
                             ></textarea>
                             <label
                                 htmlFor="message"
-                                className={`left-12 top-6 ${PEER_COMMON} ${TEXTAREA_LABEL_PEER}`}
+                                className={`left-6 md:left-12 top-6 ${PEER_COMMON} ${TEXTAREA_LABEL_PEER}`}
                             >
                                 Message
                             </label>

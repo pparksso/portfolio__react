@@ -36,6 +36,7 @@ const Header = () => {
                 targetEl.scrollIntoView({ behavior: 'smooth' });
             }
         }
+        if (window.innerWidth < 1025) setSideH(false);
     }, [location]);
 
     const sideHeaderHandler = () => {
@@ -123,7 +124,6 @@ const Header = () => {
                                     className={`inline-block text-2xl font-bold ${
                                         location.hash === '#profile' && 'text-emerald'
                                     }`}
-                                    onClick={() => setSideH(false)}
                                 >
                                     Profile
                                 </a>
@@ -134,7 +134,6 @@ const Header = () => {
                                     className={`inline-block text-2xl font-bold ${
                                         location.hash === '#career' && 'text-emerald'
                                     }`}
-                                    onClick={() => setSideH(false)}
                                 >
                                     Career
                                 </a>
@@ -145,7 +144,6 @@ const Header = () => {
                                     className={`inline-block text-2xl font-bold ${
                                         location.hash === '#work' && 'text-emerald'
                                     }`}
-                                    onClick={() => setSideH(false)}
                                 >
                                     Experience
                                 </a>
@@ -156,7 +154,6 @@ const Header = () => {
                                     className={`inline-block text-2xl font-bold ${
                                         location.hash === '#project' && 'text-emerald'
                                     }`}
-                                    onClick={() => setSideH(false)}
                                 >
                                     Side Project
                                 </a>
@@ -167,7 +164,6 @@ const Header = () => {
                                     className={`inline-block text-2xl font-bold ${
                                         location.pathname.includes('contact') && 'text-emerald'
                                     }`}
-                                    onClick={() => setSideH(false)}
                                 >
                                     Contact
                                 </Link>

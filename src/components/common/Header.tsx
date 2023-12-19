@@ -48,7 +48,7 @@ const Header = () => {
             <header
                 className={`fixed w-full text-white bg-black z-50 ${
                     isHidden ? 'h-0' : 'h-16'
-                } transition-all hidden md:block lg:block xl:block`}
+                } transition-all hidden md:block lg:block xl:block overflow-hidden`}
             >
                 <div className="flex items-center justify-center h-full">
                     <h1 className="absolute left-3 -translate-y-2/4 top-2/4">

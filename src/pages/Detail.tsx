@@ -21,21 +21,21 @@ const Detail = () => {
     return (
         <MainLayout>
             <div className="w-4/5 py-12 text-black md:w-3/5 pb-52">
-                <h1 className="text-[24px] md:text-4xl font-bold text-emerald leading-none mb-8">
+                <h1 className="text-[24px] font-bold text-emerald leading-none mb-8">
                     {contents?.name}
                 </h1>
                 <div className="mb-5">
-                    <h2 className="font-bold">🔗 프로젝트 관련 링크</h2>
-                    <a href={contents?.url} target="_blank" className="underline ">
+                    <h2 className="font-bold">프로젝트 관련 링크</h2>
+                    <a href={contents?.url} className="underline ">
                         {contents?.url}
                     </a>
                 </div>
                 <div className="mb-5">
-                    <h2 className="font-bold">📚 해당 프로젝트 설명</h2>
+                    <h2 className="font-bold">해당 프로젝트 설명</h2>
                     <p>{contents?.desc}</p>
                 </div>
                 <div className="mb-5">
-                    <h2 className="font-bold">🛠️ 기술 스택</h2>
+                    <h2 className="font-bold">기술 스택</h2>
                     <ul className="">
                         {contents?.stack.map((s) => (
                             <li
@@ -48,7 +48,7 @@ const Detail = () => {
                     </ul>
                 </div>
                 <div className="mb-5">
-                    <h2 className="font-bold">🗣️ 협업 툴</h2>
+                    <h2 className="font-bold">협업 툴</h2>
                     <ul>
                         {contents?.tool.map((t) => (
                             <li
@@ -61,26 +61,23 @@ const Detail = () => {
                     </ul>
                 </div>
                 <div>
-                    <h2 className="font-bold">
-                        💻 구현 기능(본인이 참여한 기능 중 주요기능만 나열하였습니다.)
-                    </h2>
+                    <h2 className="font-bold">구현 기능(본인이 참여한 기능만 나열하였습니다.)</h2>
                     <ul>
                         {contents?.func.map((f, i) => (
-                            <li className="mt-4">
+                            <li className="mt-2">
                                 <span>
                                     {i + 1}. {f.title}
                                 </span>
                                 {f.desc && <p className="mb-5 text-sm pl-7">{f.desc}</p>}
-
-                                {f.img && (
-                                    <div className="flex justify-center">
+                                <div className="flex justify-center ">
+                                    {f.img && (
                                         <img
                                             src={f.img}
                                             alt={f.title}
-                                            className="shadow-2xl md:w-[80%] w-full rounded-lg"
+                                            className="shadow-2xl md:w-[90%] w-full"
                                         />
-                                    </div>
-                                )}
+                                    )}
+                                </div>
                             </li>
                         ))}
                     </ul>

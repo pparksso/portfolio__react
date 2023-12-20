@@ -13,7 +13,6 @@ export const experienceDatas: ExperienceItem[] = [
         function: [
             '변환 전, 후 사진 비교 기능 구현',
             '리뷰 등록 및 등록된 리뷰 자동 상하 롤링 시스템 구현',
-            '파일 다운로드 기능 구현',
             '로그인, 로그아웃 구현',
             '광고 등록, 조회, 수정, 페이지네이션 기능 구현',
             '데이터의 차트화',
@@ -38,18 +37,18 @@ export const experienceDatas: ExperienceItem[] = [
     },
     {
         id: 3,
-        name: '자사 기술 소개 사이트',
+        name: '자사 기술 소개페이지',
         url: `https://tech.${import.meta.env.VITE_IDEA}.com`,
         component: '/project/3',
         desc: '자사 기술 소개 페이지 프론트 개발',
         team: ['1인 개발'],
         period: '2023.05',
         stack: 'vue3, swiper, scss',
-        function: ['vanilla javascript로 페이지 슬라이드 구현'],
+        function: ['swiper 라이브러리를 이용한 페이지 슬라이드 구현'],
     },
     {
         id: 4,
-        name: '자사 홈페이지',
+        name: '자사 홈페이지 개발',
         url: `https://${import.meta.env.VITE_IDEA}.com`,
         component: '/project/acon',
         desc: '자사 대표 홈페이지와 관리자 페이지 프론트 개발',
@@ -57,7 +56,6 @@ export const experienceDatas: ExperienceItem[] = [
         period: '2022.11 ~ 2023.01',
         stack: 'vue3, pinia, axios, scss, swiper, i18n',
         function: [
-            'Vanilla Javascript로 개발된 기존 대표 홈페이지를 Vue3로 마이그레이션',
             '스크롤 애니메이션 구현',
             '반응형 웹 개발',
             'i18n을 이용한 다국어 기능 구현',
@@ -78,10 +76,11 @@ export const sideProjectDatas: ExperienceItem[] = [
         stack: 'javascript, nodejs, express, mongodb(mongoose), heroku',
         function: [
             'UX/UI 디자인 제작 및 반응형 레이아웃 구현',
-            '로그인, 로그아웃, 마이페이지 수정, 회원 탈퇴 등 회원 관련 기능 구현',
-            '글 작성, 수정, 삭제 조회 기능 구현',
-            '하트 누르기, 댓글 기능',
-            '본인 게시물, 하트 누른 게시물 등 필터 기능',
+            '로그인, 로그아웃, 마이페이지 수정, 회원 탈퇴 등 회원 관련 기능',
+            '기본적인 CRUD 기능',
+            '하트 누르기 기능',
+            '댓글 기능',
+            '본인 게시물 필터 기능',
         ],
     },
 ];

@@ -22,7 +22,7 @@ export const projectItems: ProjectItem[] = [
             {
                 title: '영상 광고 모달 기능 개발',
                 desc: 'vue의 Teleport를 사용하여 모달 형태의 동영상 광고를 구현한 부분입니다. 모달이 열릴 때 해당 광고의 정보를 api로 받아와 음소거 상태로 재생되도록 작업하였습니다.',
-                img: '/imgs/ideapc_ad.gif',
+                img: '/imgs/ideapc_ad-min.gif',
             },
             {
                 title: '이미지 슬라이더 기능 개발',
@@ -92,7 +92,7 @@ export const projectItems: ProjectItem[] = [
             {
                 title: '페이지 슬라이드 개발',
                 desc: 'Vanilla Javascript 를 활용해 페이지 슬라이딩 효과를 개발하였습니다. 다양한 섹션을 개별 컴포넌트로 나누어 일렬로 배치하고, 좌우로 이동할 수 있는 구조를 만들었습니다. ',
-                img: '/imgs/tech_swiper.gif',
+                img: '/imgs/tech_swiper-min.gif',
             },
         ],
     },

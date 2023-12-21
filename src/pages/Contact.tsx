@@ -1,4 +1,5 @@
-import { ChangeEvent, useState } from 'react';
+import { useState, useRef, FormEvent } from 'react';
+import emailjs from '@emailjs/browser';
 import MainLayout from '@/layouts/MainLayout';
 import Title from '@/components/Card/Title';
 import ContactInput from '@/components/ContactInput';
@@ -7,9 +8,24 @@ import '@/assets/styles/custom.css';
 import img from '@/assets/images/img_original.jpg';
 
 const Contact = () => {
+    const form = useRef<HTMLFormElement>(null);
     const [messageFocus, setMessageFocus] = useState(false);
-    const [messageVal, setMessageVal] = useState('');
-    console.log(messageVal);
+
+    const sendEmail = (e: FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        if (form.current) {
+            emailjs
+                .sendForm(
+                    import.meta.env.VITE_SERVICE_ID,
+                    import.meta.env.VITE_TEMPLATE_ID,
+                    form.current,
+                    import.meta.env.VITE_PUBLIC_KEY,
+                )
+                .then((res) => console.log(res))
+                .catch((err) => console.log(err));
+        }
+    };
+
     return (
         <MainLayout>
             <div className="relative w-[90%] xl:w-3/5 py-12 text-black">
@@ -24,7 +40,11 @@ const Contact = () => {
                             className="object-cover md:rounded-md aspect-square md:aspect-auto"
                         />
                     </div>
-                    <div className="flex flex-col w-full md:h-full md:w-1/2 md:pl-3">
+                    <form
+                        ref={form}
+                        onSubmit={sendEmail}
+                        className="flex flex-col w-full md:h-full md:w-1/2 md:pl-3"
+                    >
                         <ContactInput type="text" id="name" label="Name" />
                         <ContactInput type="text" id="email" label="Email" />
                         <div
@@ -35,12 +55,10 @@ const Contact = () => {
                             <textarea
                                 id="message"
                                 placeholder=""
+                                name="message"
                                 className={`resize-none w-full bg-transparent outline-none text-base peer hide-scrollbar h-24 md:h-auto`}
                                 onFocus={() => setMessageFocus(true)}
                                 onBlur={() => setMessageFocus(false)}
-                                onInput={(e: ChangeEvent<HTMLTextAreaElement>) =>
-                                    setMessageVal(e.target.value)
-                                }
                             ></textarea>
                             <label
                                 htmlFor="message"
@@ -54,7 +72,7 @@ const Contact = () => {
                                 SEND
                             </button>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </MainLayout>

@@ -50,10 +50,10 @@ const Profile = () => {
                     </div>
                     <div className="">
                         <h2 className="text-2xl font-bold text-emerald">Skill</h2>
-                        <div className="flex items-center max-[430px]:justify-center max-[430px]:flex-col">
+                        {/* <div className="flex items-center max-[430px]:justify-center max-[430px]:flex-col">
                             <h3 className="text-lg font-bold min-[430px]:w-28">Deploy :</h3>
                             <span className=" text-slate-400">...</span>
-                        </div>
+                        </div> */}
                         <div className="flex items-center max-[430px]:justify-center max-[430px]:flex-col">
                             <h3 className="text-lg font-bold min-[430px]:w-28">Language :</h3>
                             <span className=" text-slate-400">Javascript, Typescript</span>

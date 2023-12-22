@@ -69,9 +69,24 @@ export const experienceDatas: ExperienceItem[] = [
 export const sideProjectDatas: ExperienceItem[] = [
     {
         id: 5,
-        name: `여행 블로그`,
-        url: ``,
+        name: '포트폴리오 사이트',
+        url: 'https://github.com/pparksso/portfolio__react',
         component: `/project/5`,
+        desc: '개인 포트폴리오 사이트',
+        team: ['1인 개발'],
+        period: '2023.12',
+        stack: 'React, vite, typescript, tailwindcss',
+        function: [
+            'UX/UI 디자인 제작 및 반응형 레이아웃 구현',
+            '공통 컴포넌트화',
+            '메일 전송 기능 구현',
+        ],
+    },
+    {
+        id: 6,
+        name: `여행 블로그`,
+        url: `https://github.com/pparksso/travelNote`,
+        component: `/project/7`,
         desc: '여행의 순간을 기록하고, 소통할 수 있는 사이트',
         team: ['1인 개발'],
         period: '2022.08.28 ~ 2022.09.24',

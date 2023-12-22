@@ -128,11 +128,52 @@ export const projectItems: ProjectItem[] = [
     },
     {
         id: 5,
+        name: '개인 포트폴리오 사이트',
+        url: 'https://github.com/pparksso/portfolio__react',
+        desc: '현재 개인 포트폴리오 사이트입니다.',
+        stack: ['React', 'vite', 'typescript', 'tailwindcss'],
+        tool: ['GitHub', 'Sourcetree'],
+        func: [
+            {
+                title: '반응형 웹 개발',
+                desc: 'tailwindcss를 활용하여 반응형 웹을 개발했습니다.',
+                img: '',
+            },
+            {
+                title: '공통 컴포넌트 개발',
+                desc: '코드를 재사용하고 일관된 UI를 제공하기 위해 공통 구조를 가진 부분들을 컴포넌트로 분리하여 개발했습니다. 데이터에 따라 동적으로 변하는 내용을 효율적으로 출력할 수 있게 작업하였습니다.',
+                img: '',
+            },
+            {
+                title: '모달 컴포넌트 개발',
+                desc: "다양한 페이지에서 활용 가능한 모달 컴포넌트를 개발했습니다. React의 'forwardRef'를 활용하여 모달을 감싸고, 'useImperativeHandle'을 이용하여 부모 컴포넌트에서 모달을 제어할 수 있는 함수를 외부로 내보내었습니다. 이를 통해 모달의 일관된 사용성을 제공하고, 재사용이 용이한 컴포넌트를 구현하였습니다.",
+                img: '/imgs/portfolio_modal.gif',
+            },
+        ],
+    },
+    {
+        id: 6,
         name: 'Travel Note',
-        url: `https://${import.meta.env.VITE_IDEA}.com`,
-        desc: 'Vue3로 기존에 Vanilla Javascript로 개발되어 있던 회사 대표 홈페이지를 마이그레이션하고, 동시에 새로운 관리자 페이지를 구축했습니다.',
-        stack: ['Vue3', 'Vite', 'Pinia', 'axios', 'SCSS'],
-        tool: ['Slack', 'GitLab', 'Sourcetree', 'Notion'],
-        func: [{ title: '', desc: '', img: '' }],
+        url: `https://www.youtube.com/watch?v=yGO6OGt2Zyo`,
+        desc: '여행의 순간을 기록하기 위한 웹페이지입니다. 현재 운영되고 있지 않습니다.',
+        stack: ['JavaScript', 'Nodejs', 'express', 'passport', 'nunjucks', 'mongoose'],
+        tool: ['GitHub'],
+        func: [
+            {
+                title: '로그인, 회원가입 및 회원 정보 관련 기능 개발',
+                desc: "회원가입 기능을 개발하면서 아이디와 닉네임은 사용자가 입력하는 즉시 API를 호출하여 데이터베이스를 조회하고, 동일한 아이디 또는 닉네임을 가진 사용자가 있는지 확인한 후 결과를 화면에 동적으로 출력하였습니다. 비밀번호는 'bcrypt'를 이용하여 안전하게 암호화하여 데이터베이스에 저장하였습니다.",
+                img: '',
+            },
+            {
+                title: '하트 누르기, 댓글 기능 개발',
+                desc: "로그인한 사용자만이 하트 기능과 댓글 기능을 활용할 수 있도록 구현하였습니다. 사용자가 하트를 누르면 서버로 해당 회원의 사용자 번호와 글 번호를 전송하고, 서버에서는 이 정보를 데이터베이스에 저장하며 이후 하트 관련 데이터베이스 프로세스를 처리합니다. 전체 과정은 JavaScript의 'try-catch문'을 활용하여 순차적으로 수행하며, 중간에 에러가 발생하면 즉시 에러 처리를 수행하도록 구현하였습니다.",
+                img: '',
+            },
+            {
+                title: '페이지네이션 개발',
+                desc: '',
+                img: '',
+            },
+        ],
     },
 ];

@@ -3,7 +3,7 @@
     "private": true,
     "version": "0.0.0",
     "type": "module",
-    "homepage": "http://pparksso.github.io",
+    "homepage": "https://pparksso.github.io",
     "scripts": {
         "predeploy": "pnpm run build",
         "deploy": "gh-pages -d dist",

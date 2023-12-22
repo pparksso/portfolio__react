@@ -2,7 +2,7 @@ import profileImg from '@/assets/images/psh.jpg';
 
 const Profile = () => {
     return (
-        <section className="w-full pb-[40px] border-b border-gray-200" id="profile">
+        <section className="w-full pb-[40px] border-b border-gray-200 scroll-m-16" id="profile">
             <div className="flex items-end justify-between w-full mb-12">
                 <h1 className="relative pl-3 text-4xl font-bold before:absolute before:block before:w-2 before:h-full before:bg-emerald before:top-1/2 before:-translate-y-1/2 before:left-0">
                     박소희<span className="text-2xl max-[430px]:block"> (Sohee park)</span>

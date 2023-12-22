@@ -7,17 +7,20 @@ import Modal from '@/components/common/Modal';
 import { PEER_COMMON, TEXTAREA_LABEL_PEER } from '@/assets/styles/_var';
 import '@/assets/styles/custom.css';
 import img from '@/assets/images/img_original.jpg';
+import Loading from '@/components/common/Loading';
 
 const Contact = () => {
     const form = useRef<HTMLFormElement>(null);
     const [messageFocus, setMessageFocus] = useState(false);
     const [modalText, setModalText] = useState('');
+    const [loading, setLoading] = useState(false);
 
     const modalRef = useRef<{ openModal: () => void } | null>(null);
 
     const sendEmail = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (form.current) {
+            setLoading(true);
             emailjs
                 .sendForm(
                     import.meta.env.VITE_SERVICE_ID,
@@ -27,20 +30,26 @@ const Contact = () => {
                 )
                 .then((res) => {
                     if (res.status === 200) {
+                        setLoading(false);
                         setModalText('메일 감사합니다! 바로 연락 드리겠습니다😀');
                         modalRef.current?.openModal();
                     } else {
+                        setLoading(false);
                         setModalText('메일 전송에 실패하였습니다. 다시 시도해주세요.');
                         modalRef.current?.openModal();
                     }
                 })
-                .catch((_err) => {
+                .catch(() => {
                     setModalText('메일 전송에 실패하였습니다. 다시 시도해주세요.');
                     modalRef.current?.openModal();
                 });
+        } else {
+            setModalText('메일 전송에 실패하였습니다. 다시 시도해주세요.');
+            modalRef.current?.openModal();
         }
     };
 
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     return (
         <>
             <MainLayout>
@@ -94,6 +103,7 @@ const Contact = () => {
                 </div>
             </MainLayout>
             <Modal text={modalText} ref={modalRef} />
+            {loading && <Loading />}
         </>
     );
 };

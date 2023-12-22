@@ -28,13 +28,16 @@ const Header = () => {
 
     // 해당 id의 dom으로 이동
     useEffect(() => {
-        const { hash } = location;
+        const { hash, pathname } = location;
+
         if (hash && hash.startsWith('#')) {
             const targetId = hash.substring(1);
             const targetEl = document.getElementById(targetId);
             if (targetEl) {
                 targetEl.scrollIntoView({ behavior: 'smooth' });
             }
+        } else if (pathname === '/' && !hash) {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
         if (window.innerWidth < 1025) setSideH(false);
     }, [location]);
@@ -42,10 +45,12 @@ const Header = () => {
     const sideHeaderHandler = () => {
         setSideH(!sideH);
     };
+
     return (
         <>
             {/* pc */}
             <header
+                id="header"
                 className={`fixed w-full text-white bg-black z-50 ${
                     isHidden ? 'h-0' : 'h-16'
                 } transition-all hidden md:block lg:block xl:block overflow-hidden`}
@@ -86,7 +91,10 @@ const Header = () => {
                 </div>
             </header>
             {/* mobile */}
-            <header className="fixed top-0 left-0 z-50 block w-full h-16 bg-white shadow-lg md:hidden lg:hidden xl:hidden">
+            <header
+                id="header"
+                className="fixed top-0 left-0 z-50 block w-full h-16 bg-white shadow-lg md:hidden lg:hidden xl:hidden"
+            >
                 <div className="relative flex items-center justify-between h-full px-8">
                     <h1 className="text-xl">
                         <Link to="/">☀️</Link>
@@ -118,50 +126,50 @@ const Header = () => {
                 >
                     <div className="bg-white w-[80%] h-[100vh] absolute top-0 right-0 p-8">
                         <ul className="">
-                            <li className="py-2">
+                            <li className="">
                                 <a
                                     href="/#/#profile"
-                                    className={`inline-block text-2xl font-bold ${
+                                    className={`py-2 w-full inline-block text-2xl font-bold ${
                                         location.hash === '#profile' && 'text-emerald'
                                     }`}
                                 >
                                     Profile
                                 </a>
                             </li>
-                            <li className="py-2">
+                            <li className="">
                                 <a
                                     href="/#/#career"
-                                    className={`inline-block text-2xl font-bold ${
+                                    className={`py-2 w-full inline-block text-2xl font-bold ${
                                         location.hash === '#career' && 'text-emerald'
                                     }`}
                                 >
                                     Career
                                 </a>
                             </li>
-                            <li className="py-2">
+                            <li>
                                 <a
                                     href="/#/#work"
-                                    className={`inline-block text-2xl font-bold ${
+                                    className={`py-2 w-full inline-block text-2xl font-bold ${
                                         location.hash === '#work' && 'text-emerald'
                                     }`}
                                 >
                                     Experience
                                 </a>
                             </li>
-                            <li className="py-2">
+                            <li>
                                 <a
                                     href="/#/#project"
-                                    className={`inline-block text-2xl font-bold ${
+                                    className={`py-2 w-full inline-block text-2xl font-bold ${
                                         location.hash === '#project' && 'text-emerald'
                                     }`}
                                 >
                                     Side Project
                                 </a>
                             </li>
-                            <li className="py-2">
+                            <li>
                                 <Link
                                     to="/contact"
-                                    className={`inline-block text-2xl font-bold ${
+                                    className={`py-2 w-full inline-block text-2xl font-bold ${
                                         location.pathname.includes('contact') && 'text-emerald'
                                     }`}
                                 >

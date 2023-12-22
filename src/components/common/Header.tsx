@@ -57,22 +57,22 @@ const Header = () => {
                     <nav className="text-xl font-bold">
                         <ul className="flex">
                             <li>
-                                <a href="/#profile" className="inline-block p-4">
+                                <a href="/#/#profile" className="inline-block p-4">
                                     Profile
                                 </a>
                             </li>
                             <li>
-                                <a href="/#career" className="inline-block p-4">
+                                <a href="/#/#career" className="inline-block p-4">
                                     Career
                                 </a>
                             </li>
                             <li>
-                                <a href="/#work" className="inline-block p-4">
+                                <a href="/#/#work" className="inline-block p-4">
                                     Experience
                                 </a>
                             </li>
                             <li>
-                                <a href="/#project" className="inline-block p-4">
+                                <a href="/#/#project" className="inline-block p-4">
                                     Side Project
                                 </a>
                             </li>
@@ -120,7 +120,7 @@ const Header = () => {
                         <ul className="">
                             <li className="py-2">
                                 <a
-                                    href="/#profile"
+                                    href="/#/#profile"
                                     className={`inline-block text-2xl font-bold ${
                                         location.hash === '#profile' && 'text-emerald'
                                     }`}
@@ -130,7 +130,7 @@ const Header = () => {
                             </li>
                             <li className="py-2">
                                 <a
-                                    href="/#career"
+                                    href="/#/#career"
                                     className={`inline-block text-2xl font-bold ${
                                         location.hash === '#career' && 'text-emerald'
                                     }`}
@@ -140,7 +140,7 @@ const Header = () => {
                             </li>
                             <li className="py-2">
                                 <a
-                                    href="/#work"
+                                    href="/#/#work"
                                     className={`inline-block text-2xl font-bold ${
                                         location.hash === '#work' && 'text-emerald'
                                     }`}
@@ -150,7 +150,7 @@ const Header = () => {
                             </li>
                             <li className="py-2">
                                 <a
-                                    href="/#project"
+                                    href="/#/#project"
                                     className={`inline-block text-2xl font-bold ${
                                         location.hash === '#project' && 'text-emerald'
                                     }`}

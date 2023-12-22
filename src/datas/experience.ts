@@ -70,7 +70,7 @@ export const sideProjectDatas: ExperienceItem[] = [
     {
         id: 5,
         name: '포트폴리오 사이트',
-        url: 'https://github.com/pparksso/portfolio__react',
+        url: 'https://github.com/pparksso/pparksso.github.io',
         component: `/project/5`,
         desc: '개인 포트폴리오 사이트',
         team: ['1인 개발'],

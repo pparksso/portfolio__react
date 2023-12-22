@@ -129,7 +129,7 @@ export const projectItems: ProjectItem[] = [
     {
         id: 5,
         name: '개인 포트폴리오 사이트',
-        url: 'https://github.com/pparksso/portfolio__react',
+        url: 'https://github.com/pparksso/pparksso.github.io',
         desc: '현재 개인 포트폴리오 사이트입니다.',
         stack: ['React', 'vite', 'typescript', 'tailwindcss'],
         tool: ['GitHub', 'Sourcetree'],

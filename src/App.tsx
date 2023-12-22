@@ -8,9 +8,9 @@ function App() {
         <>
             <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<Main />} />
-                    <Route path="/contact" element={<Contact />} />
-                    <Route path="/project/:id" element={<Detail />} />
+                    <Route path="/pparksso.github.io" element={<Main />} />
+                    <Route path="/pparksso.github.io/contact" element={<Contact />} />
+                    <Route path="/pparksso.github.io/project/:id" element={<Detail />} />
                 </Routes>
             </BrowserRouter>
         </>

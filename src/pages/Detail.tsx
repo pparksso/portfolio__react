@@ -20,7 +20,7 @@ const Detail = () => {
     }, [id, navigate]);
     return (
         <MainLayout>
-            <div className="w-4/5 py-12 text-black md:w-3/5 pb-52">
+            <div className="w-4/5 py-12 text-black md:w-3/5 pb-52 break-keep">
                 <h1 className="text-[24px] md:text-4xl font-bold text-emerald leading-none mb-8">
                     {contents?.name}
                 </h1>

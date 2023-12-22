@@ -12,7 +12,7 @@ const Main = () => {
                 <Profile />
                 <Section id="introduce">
                     <Title>Introduction</Title>
-                    <div className="text-lg">
+                    <div className="text-lg break-keep">
                         <p>안녕하세요. 2년차 프론트엔드 개발자 박소희입니다.</p>
                         <p>
                             현재는 웹툰 관련 스타트업에서 프론트엔드 개발자로 일하고 있으며, 지난

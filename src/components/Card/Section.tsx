@@ -5,7 +5,7 @@ const Section = (props: { id: string; children: React.ReactNode }) => {
             id={id}
             className={`py-[60px] ${
                 id === 'project' ? '' : 'border-b'
-            } border-gray-200 scroll-m-16`}
+            } border-gray-200 scroll-m-16 break-keep`}
         >
             {props.children}
         </section>

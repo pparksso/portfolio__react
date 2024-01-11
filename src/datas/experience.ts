@@ -27,7 +27,7 @@ export const experienceDatas: ExperienceItem[] = [
         component: `/project/2`,
         desc: `웹툰 자동 번역 툴과 클라이언트,번역가를 매칭해주는 기능의 자체 플랫폼 구축`,
         team: ['자사 프론트엔드 개발자 2명, 백엔드 개발자 1명'],
-        period: '2023.03 ~ 2022.11',
+        period: '2023.03 ~ 2023.11',
         stack: 'Nuxt3, typescript, pinia, nuxtauth, scss',
         function: [
             '회원 가입, 로그인, 마이페이지 등 회원 정보 관련 기능 프론트 개발',

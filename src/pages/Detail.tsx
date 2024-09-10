@@ -24,12 +24,15 @@ const Detail = () => {
                 <h1 className="text-[24px] md:text-4xl font-bold text-emerald leading-none mb-8">
                     {contents?.name}
                 </h1>
-                <div className="mb-5">
-                    <h2 className="font-bold">🔗 프로젝트 관련 링크</h2>
-                    <a href={contents?.url} target="_blank" className="underline ">
-                        {contents?.url}
-                    </a>
-                </div>
+                {contents?.url && (
+                    <div className="mb-5">
+                        <h2 className="font-bold">🔗 프로젝트 관련 링크</h2>
+                        <a href={contents?.url} target="_blank" className="underline ">
+                            {contents?.url}
+                        </a>
+                    </div>
+                )}
+
                 <div className="mb-5">
                     <h2 className="font-bold">📚 해당 프로젝트 설명</h2>
                     <p>{contents?.desc}</p>
@@ -70,7 +73,11 @@ const Detail = () => {
                                 <span>
                                     {i + 1}. {f.title}
                                 </span>
-                                {f.desc && <p className="mb-5 text-sm pl-7">{f.desc}</p>}
+                                {f.desc && (
+                                    <p className="mb-5 text-sm whitespace-pre-wrap pl-7">
+                                        {f.desc}
+                                    </p>
+                                )}
 
                                 {f.img && (
                                     <div className="flex justify-center">

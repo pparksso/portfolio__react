@@ -2,9 +2,28 @@ import { ExperienceItem } from '@/types/type';
 
 export const experienceDatas: ExperienceItem[] = [
     {
+        id: 7,
+        name: '전자 연구노트',
+        url: '',
+        component: `/project/7`,
+        desc: '블록 기반 웹 에디터 기반의 전자 연구노트 플랫폼의 CRUD 페이지, 에디터 기능 구현 및 버그 수정',
+        team: ['풀스택 개발자 1명, 프론트엔드 개발자 2명, 백엔드 개발자 1명, 퍼블리셔 1명'],
+        period: '2024.03 ~ 2024.09',
+        stack: 'vite, vue3, typescript, pinia, axios, scss, chartjs, okta',
+        function: [
+            'CRUD, 페이지네이션, 검색 기능',
+            '에디터 내 블록 형태의 복사 붙여넣기 기능',
+            '자체 로그인, 로그아웃, okta 로그인 구현',
+            '에디터의 블록 내 이미지, 차트 사이즈 리사이징 기능',
+            'chart js를 이용한 에디터 내 차트 기능',
+            'Vue Datepicker 라이브러리를 이용한 에디터 내 데이터피커 기능',
+            '에디터 블록 관련 발생된 버그 수정',
+        ],
+    },
+    {
         id: 1,
-        name: `${import.meta.env.VITE_PC}`,
-        url: `https://${import.meta.env.VITE_PC_S}.kr`,
+        name: `IDEAPC`,
+        url: `https://ideapc.kr`,
         component: `/project/1`,
         desc: 'AI 사진 변환 기능을 가진 광고 수익 모델 사이트의 사용자 페이지와 관리자 페이지 프론트 1인 개발',
         team: ['자사 프론트엔드 개발자 1명, 백엔드 개발자 1명'],
@@ -22,8 +41,8 @@ export const experienceDatas: ExperienceItem[] = [
     },
     {
         id: 2,
-        name: import.meta.env.VITE_TOON,
-        url: `https://beta.${import.meta.env.VITE_TOON_S}.com`,
+        name: 'TOONTRA',
+        url: `https://beta.toontra.com`,
         component: `/project/2`,
         desc: `웹툰 자동 번역 툴과 클라이언트,번역가를 매칭해주는 기능의 자체 플랫폼 구축`,
         team: ['자사 프론트엔드 개발자 2명, 백엔드 개발자 1명'],
@@ -39,7 +58,7 @@ export const experienceDatas: ExperienceItem[] = [
     {
         id: 3,
         name: '자사 기술 소개 사이트',
-        url: `https://tech.${import.meta.env.VITE_IDEA}.com`,
+        url: `https://tech.ideaconcert.com`,
         component: '/project/3',
         desc: '자사 기술 소개 페이지 프론트 개발',
         team: ['1인 개발'],
@@ -50,7 +69,7 @@ export const experienceDatas: ExperienceItem[] = [
     {
         id: 4,
         name: '자사 홈페이지',
-        url: `https://${import.meta.env.VITE_IDEA}.com`,
+        url: `https://ideaconcert.com`,
         component: '/project/acon',
         desc: '자사 대표 홈페이지와 관리자 페이지 프론트 개발',
         team: ['자사 프론트엔드 개발자 2명, 백엔드 개발자 1명'],

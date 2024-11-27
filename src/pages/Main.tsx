@@ -43,15 +43,15 @@ const Main = () => {
                     <div className="">
                         <div className="flex flex-col justify-between mb-3 text-lg md:flex-row">
                             <h3>(주) 스마트인테크</h3>
-                            <span className="text-base">2024.03.07 ~ 재직 중 (7개월)</span>
+                            <span className="text-base">2024.03.07 ~ 2024.10.31 (8개월)</span>
                         </div>
                         <p className="text-lg">
                             Vue3 프레임워크를 활용한 블록 기반 웹 에디터가 주요 기능인 연구노트
-                            플랫폼 개발에 참여하고 있습니다.
+                            플랫폼 개발에 참여하였습니다.
                             <br /> 이 과정에서 비즈니스 로직을 신속하게 이해하고 구현하며, 발생하는
                             버그를 빠르게 식별하고 해결하는 데 강점을 발휘하고 있습니다.
                             <br /> 또한, 컴포넌트 기반 아키텍처를 적극 활용해 유지보수와 확장성이
-                            용이한 코드를 작성하고 있습니다.
+                            용이한 코드를 작성하였습니다.
                         </p>
                     </div>
                     <div className="mt-10">

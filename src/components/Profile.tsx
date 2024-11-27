@@ -9,7 +9,7 @@ const Profile = () => {
                     박소희<span className="text-2xl max-[430px]:block"> (Sohee park)</span>
                 </h1>
                 <span className="hidden text-xs text-gray-300 md:block">
-                    Last updated: 2024.09.10
+                    Last updated: 2024.11.27
                 </span>
             </div>
             <div className="flex flex-col items-center lg:flex-row">

@@ -18,6 +18,7 @@ const Profile = () => {
                         src={profileImg}
                         alt="sohee park image"
                         className="object-cover object-center w-full h-full"
+                        loading="eager"
                     />
                 </div>
                 <div className="max-[430px]:text-center">
@@ -58,7 +59,9 @@ const Profile = () => {
                         </div>
                         <div className="flex items-center max-[430px]:justify-center">
                             <h3 className="text-lg font-bold min-[430px]:w-28">Framework: </h3>
-                            <span className=" text-slate-400">Vue3, Nuxt3, React</span>
+                            <span className=" text-slate-400">
+                                Vue3, Nuxt3, React, React Native
+                            </span>
                         </div>
                         <div className="flex items-center max-[430px]:justify-center max-[430px]:flex-col">
                             <h3 className="text-lg font-bold min-[430px]:w-28">Tool: </h3>
